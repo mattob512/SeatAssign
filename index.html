@@ -1,8 +1,20 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
     <body>
 
     <form align="center" method="GET">
-        <input type="text" name="student" id="student_id"><br>
+        <input type="text" name="name" id="name_id"><br>
+        <input type="text" name="gender" id="gender_id"><br>
+        <input type="text" name="partner1" id="partner1_id"><br>
+        <input type="text" name="partner2" id="partner2_id"><br>
+        <input type="checkbox" name="front" id="front_box"><br>
+        <input type="checkbox" name="middle" id="middle_box"><br>
+        <input type="checkbox" name="back" id="back_box"><br>
+        <input type="checkbox" name="teacher" id="teacher_box"><br>
+        <input type="checkbox" name="windows" id="windows_box"><br>
         <input type="submit" id="mysubmit" value="Submit" onClick="addRow(); return false;">
     </form>
 
@@ -25,40 +37,43 @@
     <script type="text/javascript">
 
       function addRow() {
+        var newRow = document.getElementById('Students').insertRow();
 
-        var rowsAdded = document.getElementById('student_id').value;
+        var newCell = newRow.insertCell();
+        var name = document.getElementById("name_id").value
+        newCell.innerHTML="<tr><td><input type='text' name='name'></td></tr>";
 
-        for(var x=0; x<rowsAdded; x++) {
-          var newRow = document.getElementById('Students').insertRow();
+        newCell = newRow.insertCell();
+        var gender = document.getElementById("gender_id").value
+        newCell.innerHTML="<tr><td><input type='text' name='gender'></td></tr>";
 
-          var newCell = newRow.insertCell();
-          newCell.innerHTML="<tr><td><input type='text' name='Name'></td></tr>";
+        newCell = newRow.insertCell();
+        var partner1 = document.getElementById("partner1_id").value
+        newCell.innerHTML="<tr><td><input type='text' name='Classmate 1'></td></tr>";
 
-          newCell = newRow.insertCell();
-          newCell.innerHTML="<tr><td><input type='text' name='Gender'></td></tr>";
+        newCell = newRow.insertCell();
+        var partner2 = document.getElementById("partner2_id").value
+        newCell.innerHTML="<tr><td><input type='text' name='Classmate 2'></td></tr>";
 
-          newCell = newRow.insertCell();
-          newCell.innerHTML="<tr><td><input type='text' name='Classmate 1'></td></tr>";
+        newCell = newRow.insertCell();
+        var front = document.getElementById("front_box").value
+        newCell.innerHTML="<tr><td><input type='text' name='Front'></td></tr>";
 
-          newCell = newRow.insertCell();
-          newCell.innerHTML="<tr><td><input type='text' name='Classmate 2'></td></tr>";
+        newCell = newRow.insertCell();
+        var middle = document.getElementById("middle_box").value
+        newCell.innerHTML="<tr><td><input type='text' name='Middle'></td></tr>";
 
-          newCell = newRow.insertCell();
-          newCell.innerHTML="<tr><td><input type='text' name='Front'></td></tr>";
+        newCell = newRow.insertCell();
+        var back = document.getElementById("back_box").value
+        newCell.innerHTML="<tr><td><input type='text' name='Back'></td></tr>";
 
-          newCell = newRow.insertCell();
-          newCell.innerHTML="<tr><td><input type='text' name='Middle'></td></tr>";
+        newCell = newRow.insertCell();
+        var teacher = document.getElementById("teacher_box").value
+        newCell.innerHTML="<tr><td><input type='text' name='Teacher'></td></tr>";
 
-          newCell = newRow.insertCell();
-          newCell.innerHTML="<tr><td><input type='text' name='Back'></td></tr>";
-
-          newCell = newRow.insertCell();
-          newCell.innerHTML="<tr><td><input type='text' name='Teacher'></td></tr>";
-
-          newCell = newRow.insertCell();
-          newCell.innerHTML="<tr><td><input type='text' name='Windows'></td></tr>";
-        }
-
+        newCell = newRow.insertCell();
+        var windows = document.getElementById("windows_box").value
+        newCell.innerHTML="<tr><td><input type='text' name='Windows'></td></tr>";
       }
     </script>
 
