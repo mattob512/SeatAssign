@@ -5,7 +5,7 @@
 
     <body>
 
-    <H1>Version 0.1</H1>
+    <H1>Version 0.2</H1>
 
     <form align="center" method="GET">
         <input type="text" name="count" id="count_id"><br>
@@ -31,7 +31,7 @@
     <script type="text/javascript">
 
       function addRows() {
-        var count = document.getElementById('count_id');
+        var count = document.getElementById('count_id').value;
 
         for(var x=0; x<count; x++) {
             var newRow = document.getElementById('Students').insertRow();
@@ -66,6 +66,7 @@
     }
 
     function createGroups() {
+
 
     }
     </script>
