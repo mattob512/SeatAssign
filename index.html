@@ -1,0 +1,67 @@
+<html>
+    <body>
+
+    <form align="center" method="GET">
+        <input type="text" name="student" id="student_id"><br>
+        <input type="submit" id="mysubmit" value="Submit" onClick="addRow(); return false;">
+    </form>
+
+    <table id="Students" style="text-align:center" align="center" valign:"top">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Classmate 1</th>
+                <th>Classmate 2</th>
+                <th>Front</th>
+                <th>Middle</th>
+                <th>Back</th>
+                <th>Teacher</th>
+                <th>Windows</th>
+            </tr>
+        </thead>
+    </table>
+
+    <script type="text/javascript">
+
+      function addRow() {
+
+        var rowsAdded = document.getElementById('student_id').value;
+
+        for(var x=0; x<rowsAdded; x++) {
+          var newRow = document.getElementById('Students').insertRow();
+
+          var newCell = newRow.insertCell();
+          newCell.innerHTML="<tr><td><input type='text' name='Name'></td></tr>";
+
+          newCell = newRow.insertCell();
+          newCell.innerHTML="<tr><td><input type='text' name='Gender'></td></tr>";
+
+          newCell = newRow.insertCell();
+          newCell.innerHTML="<tr><td><input type='text' name='Classmate 1'></td></tr>";
+
+          newCell = newRow.insertCell();
+          newCell.innerHTML="<tr><td><input type='text' name='Classmate 2'></td></tr>";
+
+          newCell = newRow.insertCell();
+          newCell.innerHTML="<tr><td><input type='text' name='Front'></td></tr>";
+
+          newCell = newRow.insertCell();
+          newCell.innerHTML="<tr><td><input type='text' name='Middle'></td></tr>";
+
+          newCell = newRow.insertCell();
+          newCell.innerHTML="<tr><td><input type='text' name='Back'></td></tr>";
+
+          newCell = newRow.insertCell();
+          newCell.innerHTML="<tr><td><input type='text' name='Teacher'></td></tr>";
+
+          newCell = newRow.insertCell();
+          newCell.innerHTML="<tr><td><input type='text' name='Windows'></td></tr>";
+        }
+
+      }
+    </script>
+
+    </body>
+
+</html>
